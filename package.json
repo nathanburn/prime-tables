@@ -1,0 +1,22 @@
+{
+	"version": "1.0.0",
+	"private": true,
+	"name": "prime-table",
+	"description": "Prime Tables",
+	"repository": "https://github.com/nathanburn/prime-tables",
+	"author": "Nathan Burn <nathan.a.burn@gmail.com>",
+	"devDependencies": {
+		"karma": "^0.12.16",
+		"karma-chrome-launcher": "^0.1.4",
+		"karma-jasmine": "~0.1.0",
+		"http-server": "^0.6.1"
+	},
+	"scripts": {
+		"prestart": "npm install",
+		"start": "http-server -a 0.0.0.0 -p 8000",
+
+		"pretest": "npm install",
+		"test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+		"test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run"
+	}
+}

@@ -1,0 +1,12 @@
+<form name="primeTableForm" ng-controller="PrimeTableController">
+	<label>
+	Number of Primes : 
+	</label>
+	<input type="number" min="1" max="10" name="numberOfPrimes" 
+		ng-model="primeTable.numberOfPrimes" ng-change="numberOfPrimesChange()" />
+
+	<span class="error" ng-show="!primeTableForm.numberOfPrimes.$valid">
+		Invalid
+	</span>
+	Valid: {{primeTableForm.numberOfPrimes.$valid}}
+</form>
