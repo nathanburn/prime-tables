@@ -10,6 +10,7 @@ controllers.controller('PrimeTableController', ['$scope', 'PrimeNumberService', 
 		primes: []
 	};
 	$scope.numberOfPrimesChange = function() {
+		$scope.primeTable.primes = []
 		if($scope.primeTable.numberOfPrimes
 			&& angular.isNumber($scope.primeTable.numberOfPrimes)
 			&& $scope.primeTable.numberOfPrimes >= 1

@@ -62,6 +62,16 @@ describe('PrimeNumberService', function (){
 			var result = PrimeNumberService.isPrimeNumber(100);
 			expect(result).toBe(false);
 		});
+
+		it('should return false for 10.4', function (){
+			var result = PrimeNumberService.isPrimeNumber(10.4);
+			expect(result).toBe(false);
+		});
+
+		it('should return true for 7.1', function (){
+			var result = PrimeNumberService.isPrimeNumber(7.1);
+			expect(result).toBe(true);
+		});
 	});
 	
 	describe('getPrimeNumbers', function() {
@@ -71,27 +81,27 @@ describe('PrimeNumberService', function (){
 
 		it('should return an empty array for no parameter', function (){
 			var result = PrimeNumberService.getPrimeNumbers();
-			expect(result).toBe([]);
+			expect(result).toEqual([]);
 		});
 		
 		it('should return an empty array for a string', function (){
 			var result = PrimeNumberService.getPrimeNumbers('test');
-			expect(result).toBe([]);
+			expect(result).toEqual([]);
 		});
 		
 		it('should return [2] for 1', function (){
 			var result = PrimeNumberService.getPrimeNumbers(1);
-			expect(result).toBe([2]);
+			expect(result).toEqual([2]);
 		});
 		
 		it('should return [2,3,5] for 3', function (){
 			var result = PrimeNumberService.getPrimeNumbers(3);
-			expect(result).toBe([2,3,5]);
+			expect(result).toEqual([2,3,5]);
 		});
 		
 		it('should return [2,3,5,7,11,13,17,19,23,29] for 10', function (){
 			var result = PrimeNumberService.getPrimeNumbers(10);
-			expect(result).toBe([2,3,5,7,11,13,17,19,23,29]);
+			expect(result).toEqual([2,3,5,7,11,13,17,19,23,29]);
 		});
 	});
 });
