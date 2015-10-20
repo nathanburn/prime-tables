@@ -9,8 +9,15 @@ services.service('PrimeNumberService', function() {
 		if(angular.isNumber(value)
 			&& value > 1) {
 			var number = parseInt(value);
-			for(var i = 2; i < number; i++) {
-				if(number % i == 0) {
+			if(number % 2 === 0
+				|| number % 3 === 0) {
+				return (number === 2
+					|| number === 3);
+			}
+			var numberSqrt = Math.sqrt(number);
+			for (var i = 5; i <= numberSqrt; i+=6) {
+				if (number % i === 0
+					|| number %(i+2) === 0) {
 					return false;
 				}
 			}
