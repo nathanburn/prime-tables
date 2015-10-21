@@ -38,7 +38,7 @@
 - Using TDD to enforce the specification and reduce complexity.
 - Clean and simple user interface with well defined HTML and reactive controls.
 - Defining an efficient prime algorithm which can be used past the current maximum of 10 prime numbers.
-- Improving the prime algorithm runtime efficiency (validated using unit test execution times - which improved by ~0.01 seconds per test) by initially checking against the 2 and 3 multiples, then testing up to the prime square root with divisors that are not multiples of 2 or 3.
+- Improving the prime algorithm runtime efficiency (validated using unit test execution times - which improved by ~0.01 seconds per dependant test) by initially checking against the 2 and 3 multiples, then testing up to the prime square root with divisors that are not multiples of 2 or 3.
 - Using and learning more about the AngularJS library.
 
 ## What would I do if I had more time?
